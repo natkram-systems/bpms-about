@@ -284,3 +284,43 @@ footer a {
     margin: 20px auto;
     text-align: left;
 }
+
+/* FOOTER SOCIAL ICONS */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #062033;
+    margin-top: 40px;
+}
+
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: #d0e8ff;
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.social-icon:hover svg {
+    transform: scale(1.2);
+    fill: #ffffff;
+}
+
+/* DARK MODE FOOTER */
+.dark .footer {
+    background: #000;
+}
+
+.dark .social-icon svg {
+    fill: #bbb;
+}
+
+.dark .social-icon:hover svg {
+    fill: #fff;
+}

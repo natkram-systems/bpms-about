@@ -137,6 +137,42 @@ footer a {
     margin: auto;
     padding: 40px 20px;
 }
+/* PURPOSE SECTION */
+.purpose {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.purpose h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #bbe1fa;
+}
+
+.purpose p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #e6f4ff;
+}
+
+.purpose-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.purpose-list li {
+    background: rgba(255,255,255,0.1);
+    margin: 10px auto;
+    padding: 12px 20px;
+    border-radius: 6px;
+    max-width: 600px;
+    font-size: 15px;
+}
+
 
 /* ABOUT PAGE TABS */
 .tabContent {

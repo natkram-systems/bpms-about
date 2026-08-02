@@ -178,3 +178,62 @@ footer a {
 .tabContent {
     animation: fadeIn 0.5s ease;
 }
+
+/* STICKY TOP NAV */
+.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* REVEAL ON SCROLL */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* LIMIT WIDTH TO 85% */
+.purpose, .modules {
+    max-width: 85%;
+}
+
+/* PURPOSE SECTION */
+.purpose {
+    padding: 40px 20px;
+    margin: auto;
+    text-align: center;
+}
+
+.purpose h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #bbe1fa;
+}
+
+.purpose p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #e6f4ff;
+}
+
+.purpose-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.purpose-list li {
+    background: rgba(255,255,255,0.1);
+    margin: 10px auto;
+    padding: 12px 20px;
+    border-radius: 6px;
+    max-width: 600px;
+    font-size: 15px;
+}

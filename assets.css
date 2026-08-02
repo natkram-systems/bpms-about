@@ -237,3 +237,50 @@ footer a {
     max-width: 600px;
     font-size: 15px;
 }
+
+/* SOLID TOP NAV */
+.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #062033; /* solid background */
+}
+
+/* FADE-IN + FADE-OUT */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* LIMIT WIDTH TO 85% */
+.purpose, .modules, .contact-home {
+    max-width: 85%;
+    margin: auto;
+}
+
+/* CONTACT HOME SECTION */
+.contact-home {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-home h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #bbe1fa;
+}
+
+.contact-box {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}

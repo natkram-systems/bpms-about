@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About BPMS</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #0a2a43;
+        background: linear-gradient(135deg, #0a2a43, #0f4c75, #3282b8);
+        background-size: 400% 400%;
+        animation: gradientMove 12s ease infinite;
+        color: #ffffff;
+    }
+
+    @keyframes gradientMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .container {
+        padding: 30px;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .logo {
+        width: 120px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-bottom: 5px;
+        font-weight: 300;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        color: #d0e8ff;
+        margin-bottom: 20px;
+    }
+
+    .tabs {
+        margin-top: 20px;
+        display: flex;
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+    }
+
+    .tab {
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 15px;
+        color: #d0e8ff;
+        transition: 0.3s;
+    }
+
+    .tab:hover {
+        background: rgba(255,255,255,0.1);
+    }
+
+    .tab.active {
+        border-bottom: 3px solid #ffffff;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .tabContent {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .tabContent.active {
+        display: block;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #bbe1fa;
+    }
+
+    p, li {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #e6f4ff;
+    }
+
+    ul {
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    .footer {
+        margin-top: 40px;
+        font-size: 12px;
+        color: #c0d8f0;
+        text-align: right;
+    }
+</style>
+
+<script>
+    function openTab(tabName) {
+        var tabContent = document.getElementsByClassName('tabContent');
+        var tabButtons = document.getElementsByClassName('tab');
+
+        for (var i = 0; i < tabContent.length; i++) {
+            tabContent[i].classList.remove('active');
+        }
+
+        for (var i = 0; i < tabButtons.length; i++) {
+            tabButtons[i].classList.remove('active');
+        }
+
+        document.getElementById(tabName).classList.add('active');
+        document.getElementById('btn_' + tabName).classList.add('active');
+    }
+</script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <img src="data:image/png;base64,{LOGO}" class="logo" alt="Company Logo" />
+
+    <h1>Business Process Management System</h1>
+    <div class="subtitle">Modular • Scalable • Multi‑Industry • ERP‑style platform</div>
+
+    <div class="tabs">
+        <div class="tab active" id="btn_about" onclick="openTab('about')">About</div>
+        <div class="tab" id="btn_license" onclick="window.location.href='app://open-license'">License</div>
+        <div class="tab" id="btn_credits" onclick="openTab('credits')">Credits</div>
+    </div>
+
+    <div id="about" class="tabContent active">
+        <h2>Overview</h2>
+        <p>
+            BPMS is a modular enterprise platform designed to streamline operations across multiple industries. 
+            Each subsystem is activated through a dedicated product key, allowing organizations to enable only the 
+            features they need. The platform supports core business functions such as inventory, accounting, payroll, 
+            and HR, while also offering specialized modules for real estate, church management, POS‑enabled retail, 
+            and time‑tracking automation. A universal Studio module provides full multi‑industry access for 
+            administrators and power users.
+        </p>
+
+        <h2>Subsystems</h2>
+
+        <h3>Core Modules</h3>
+        <ul>
+            <li>Inventory – Stock tracking and item management</li>
+            <li>IM Plus – Inventory with integrated POS</li>
+            <li>Accounting – Financial management and reporting</li>
+            <li>Payroll – Employee compensation and payroll processing</li>
+        </ul>
+
+        <h3>HR & Attendance</h3>
+        <ul>
+            <li>HR System – Employee and HR workflow management</li>
+            <li>DTR Scanning – Automated Daily Time Record processing</li>
+        </ul>
+
+        <h3>Industry‑Specific</h3>
+        <ul>
+            <li>RealEstate – Real estate–focused accounting</li>
+            <li>CMS – Church Management System</li>
+        </ul>
+
+        <h3>Administrative</h3>
+        <ul>
+            <li>Studio – Universal access to all subsystem types</li>
+        </ul>
+    </div>
+
+    <div id="credits" class="tabContent">
+        <h2>Credits</h2>
+        <p>Developed by: <b>NATKRAM‑SYSTEMS</b></p>
+        <p>Lead Developer: <b>Camlot</b></p>
+    </div>
+
+    <div class="footer">
+        BPMS — Empowering organizations with a modern, adaptable business platform.
+    </div>
+
+</div>
+
+</body>
+</html>

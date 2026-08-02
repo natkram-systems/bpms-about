@@ -5,13 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About BPMS</title>
+<link rel="stylesheet" href="assets.css">
+<link rel="icon" type="image/png" href="logo.png">
 
 <style>
     body {
         margin: 0;
         padding: 0;
         font-family: 'Segoe UI', sans-serif;
-        background-color: #0a2a43;
         background: linear-gradient(135deg, #0a2a43, #0f4c75, #3282b8);
         background-size: 400% 400%;
         animation: gradientMove 12s ease infinite;
@@ -33,18 +34,6 @@
     .logo {
         width: 120px;
         height: auto;
-        margin-bottom: 20px;
-    }
-
-    h1 {
-        font-size: 32px;
-        margin-bottom: 5px;
-        font-weight: 300;
-    }
-
-    .subtitle {
-        font-size: 16px;
-        color: #d0e8ff;
         margin-bottom: 20px;
     }
 
@@ -75,35 +64,27 @@
     .tabContent {
         display: none;
         margin-top: 20px;
+        animation: fadeIn 0.5s ease;
     }
 
     .tabContent.active {
         display: block;
     }
 
-    h2 {
-        font-size: 20px;
-        margin-top: 20px;
+    .darkToggle {
+        float: right;
+        background: rgba(255,255,255,0.2);
+        border: none;
+        padding: 8px 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        color: #fff;
         margin-bottom: 10px;
-        color: #bbe1fa;
     }
 
-    p, li {
-        font-size: 14px;
-        line-height: 1.6;
-        color: #e6f4ff;
-    }
-
-    ul {
-        margin-top: 5px;
-        margin-bottom: 15px;
-    }
-
-    .footer {
-        margin-top: 40px;
-        font-size: 12px;
-        color: #c0d8f0;
-        text-align: right;
+    .dark {
+        background: #111 !important;
+        color: #eee !important;
     }
 </style>
 
@@ -123,21 +104,33 @@
         document.getElementById(tabName).classList.add('active');
         document.getElementById('btn_' + tabName).classList.add('active');
     }
+
+    function toggleDark() {
+        document.body.classList.toggle('dark');
+    }
 </script>
 
 </head>
 <body>
 
-<div class="container">
+<nav class="topnav fade">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="contact.html">Contact</a>
+    <button class="darkToggle" onclick="toggleDark()">🌙</button>
+</nav>
 
-    <img src="data:image/png;base64,{LOGO}" class="logo" alt="Company Logo" />
+<div class="container fade">
+
+    <img src="logo.png" class="logo" alt="Company Logo" />
 
     <h1>Business Process Management System</h1>
     <div class="subtitle">Modular • Scalable • Multi‑Industry • ERP‑style platform</div>
 
     <div class="tabs">
         <div class="tab active" id="btn_about" onclick="openTab('about')">About</div>
-        <div class="tab" id="btn_license" onclick="window.location.href='app://open-license'">License</div>
         <div class="tab" id="btn_credits" onclick="openTab('credits')">Credits</div>
     </div>
 
@@ -184,10 +177,6 @@
         <h2>Credits</h2>
         <p>Developed by: <b>NATKRAM‑SYSTEMS</b></p>
         <p>Lead Developer: <b>Camlot</b></p>
-    </div>
-
-    <div class="footer">
-        BPMS — Empowering organizations with a modern, adaptable business platform.
     </div>
 
 </div>

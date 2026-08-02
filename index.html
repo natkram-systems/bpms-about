@@ -5,20 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BPMS — NATKRAM SYSTEMS</title>
 <link rel="stylesheet" href="assets.css">
+<link rel="icon" type="image/png" href="logo.png">
+<script>
+function toggleDark() {
+    document.body.classList.toggle('dark');
+}
+</script>
 </head>
 
 <body>
 
-<nav class="topnav">
+<nav class="topnav fade">
     <a href="index.html" class="active">Home</a>
     <a href="about.html">About</a>
     <a href="privacy.html">Privacy Policy</a>
     <a href="terms.html">Terms of Service</a>
+    <a href="contact.html">Contact</a>
+    <button class="darkToggle" onclick="toggleDark()">🌙</button>
 </nav>
 
+<div class="fade">
 <header class="hero">
     <div class="hero-content">
-        <img src="data:image/png;base64,{LOGO}" class="hero-logo">
+        <img src="logo.png" class="hero-logo">
         <h1>Business Process Management System</h1>
         <p class="tagline">Modular • Scalable • Multi‑Industry • ERP‑Style Platform</p>
         <a href="about.html" class="btn-primary">Learn More</a>
@@ -44,9 +53,8 @@
 
 <footer>
     <p>© 2026 NATKRAM SYSTEMS — BPMS Platform</p>
-    <a href="privacy.html">Privacy Policy</a> • 
-    <a href="terms.html">Terms of Service</a>
 </footer>
+</div>
 
 </body>
 </html>

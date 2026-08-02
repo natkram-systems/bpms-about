@@ -3,6 +3,21 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background: #0a2a43;
     color: #ffffff;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark {
+    background: #111 !important;
+    color: #eee !important;
+}
+
+.fade {
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .topnav {
@@ -10,6 +25,7 @@ body {
     padding: 10px 20px;
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .topnav a {
@@ -21,6 +37,16 @@ body {
 .topnav a.active {
     color: #ffffff;
     font-weight: bold;
+}
+
+.darkToggle {
+    margin-left: auto;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
 }
 
 .hero {

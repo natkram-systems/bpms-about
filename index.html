@@ -13,15 +13,22 @@ function toggleDark() {
     document.body.classList.toggle('dark');
 }
 
-// FADE-IN ON SCROLL
+// FADE-IN + FADE-OUT ON SCROLL
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll(".reveal");
 
     const revealOnScroll = () => {
         sections.forEach(section => {
             const rect = section.getBoundingClientRect();
+
+            // Fade IN when entering viewport
             if (rect.top < window.innerHeight - 100) {
                 section.classList.add("visible");
+            }
+
+            // Fade OUT when leaving viewport
+            if (rect.bottom < 150 || rect.top > window.innerHeight) {
+                section.classList.remove("visible");
             }
         });
     };
@@ -98,6 +105,18 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="module-card"><h3>CMS</h3><p>Church Management System.</p></div>
         <div class="module-card"><h3>Studio</h3><p>Universal access to all subsystem types.</p></div>
 
+    </div>
+</section>
+
+<!-- CONTACT US SECTION -->
+<section class="contact-home reveal">
+    <h2>Contact Us</h2>
+    <p>If you have questions, concerns, or business inquiries, feel free to reach out.</p>
+
+    <div class="contact-box">
+        <p><b>Email:</b> support@natkram-systems.asia</p>
+        <p><b>Business Hours:</b> Monday – Saturday, 8:00 AM – 6:00 PM</p>
+        <p><b>Location:</b> Samal, Davao, Philippines</p>
     </div>
 </section>
 

@@ -6,11 +6,56 @@
 <title>Terms of Service — BPMS</title>
 <link rel="stylesheet" href="assets.css">
 <link rel="icon" type="image/png" href="logo.png">
-<script>
-function toggleDark() {
-    document.body.classList.toggle('dark');
-}
-</script>
+
+<style>
+    body {
+        background: linear-gradient(135deg, #1e1e1e, #2b2b2b);
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .terms-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .terms-box {
+        width: 85%;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        animation: fadeIn 0.8s ease;
+    }
+
+    .terms-box h1 {
+        margin-top: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .terms-box p {
+        line-height: 1.7;
+        opacity: 0.95;
+    }
+
+    .terms-box h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
 </head>
 
 <body>
@@ -21,53 +66,67 @@ function toggleDark() {
     <a href="privacy.html">Privacy Policy</a>
     <a href="terms.html" class="active">Terms of Service</a>
     <a href="contact.html">Contact</a>
-    <button class="darkToggle" onclick="toggleDark()">🌙</button>
 </nav>
 
-<div class="page-container fade">
+<div class="terms-wrapper">
+    <div class="terms-box fade">
 
-<h1>Application Terms of Service</h1>
-<p>Last Updated: August 2026</p>
+        <h1>Application Terms of Service</h1>
+        <p><b>Last Updated: August 2026</b></p>
 
-<h2>1. Acceptance of Terms</h2>
-<p>
-By using BPMS, you agree to these Terms of Service.
-If you do not agree, you must discontinue use of the application.
-</p>
+        <h2>1. Acceptance of Terms</h2>
+        <p>
+            By accessing or using the BPMS (Business Process Management System) platform, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. 
+            If you do not agree with any part of these terms, you must discontinue use of the application immediately.
+        </p>
 
-<h2>2. Use of the Application</h2>
-<p>
-BPMS is provided for business operations, workflow management, and enterprise processing.
-You agree not to misuse the system or attempt unauthorized access.
-</p>
+        <h2>2. Purpose and Scope of Use</h2>
+        <p>
+            BPMS is designed to support business operations, workflow automation, enterprise processing, and organizational management. 
+            You agree to use the system only for lawful and authorized purposes. Any attempt to disrupt system functionality, bypass security, or gain unauthorized access is strictly prohibited.
+        </p>
 
-<h2>3. Accounts and Authentication</h2>
-<p>
-You are responsible for maintaining the confidentiality of your login credentials.
-Google OAuth is used for secure authentication.
-</p>
+        <h2>3. Accounts, Authentication, and Security</h2>
+        <p>
+            Users are responsible for maintaining the confidentiality of their login credentials and ensuring that their accounts are not shared with unauthorized individuals. 
+            BPMS uses Google OAuth for secure authentication. You agree to notify NATKRAM SYSTEMS immediately if you suspect any unauthorized access or security breach.
+        </p>
 
-<h2>4. Data Ownership</h2>
-<p>
-All operational data entered into BPMS belongs to the organization using the software.
-NATKRAM SYSTEMS does not claim ownership of customer data.
-</p>
+        <h2>4. Data Ownership and Responsibility</h2>
+        <p>
+            All operational, transactional, and organizational data entered into BPMS remains the property of the organization using the software. 
+            NATKRAM SYSTEMS does not claim ownership of customer or business data and will not access or modify such data unless explicitly authorized for support or maintenance purposes.
+        </p>
 
-<h2>5. Limitation of Liability</h2>
-<p>
-BPMS is provided “as‑is” without warranties.
-NATKRAM SYSTEMS is not liable for data loss, system downtime, or misuse of the application.
-</p>
+        <h2>5. System Availability and Limitations</h2>
+        <p>
+            BPMS is provided on an “as‑is” and “as‑available” basis. While NATKRAM SYSTEMS strives to maintain system stability and uptime, we do not guarantee uninterrupted service. 
+            We are not liable for data loss, downtime, technical issues, or damages resulting from misuse, third‑party actions, or unforeseen system failures.
+        </p>
 
-<h2>6. Updates and Changes</h2>
-<p>
-We may update BPMS or these Terms at any time.
-Continued use of the application means you accept the updated terms.
-</p>
+        <h2>6. Software Updates and Modifications</h2>
+        <p>
+            NATKRAM SYSTEMS may update, modify, or enhance BPMS at any time to improve performance, security, or functionality. 
+            These updates may occur without prior notice. Continued use of the application after updates signifies your acceptance of the modified terms and features.
+        </p>
 
-<h2>7. Contact</h2>
-<p>Email: <b>support@natkram-systems.asia</b></p>
+        <h2>7. Termination of Access</h2>
+        <p>
+            NATKRAM SYSTEMS reserves the right to suspend or terminate user access if violations of these Terms occur, including misuse, unauthorized access attempts, or actions that compromise system integrity.
+        </p>
 
+        <h2>8. Governing Law</h2>
+        <p>
+            These Terms of Service shall be governed by and interpreted in accordance with applicable laws in the Philippines, without regard to conflict‑of‑law principles.
+        </p>
+
+        <h2>9. Contact Information</h2>
+        <p>
+            For questions, concerns, or legal inquiries, you may contact us at:<br>
+            <b>support@natkram-systems.asia</b>
+        </p>
+
+    </div>
 </div>
 
 </body>

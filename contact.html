@@ -61,7 +61,7 @@
         border: none;
         margin-bottom: 15px;
         font-size: 15px;
-        text-align: center; /* optional but improves centering feel */
+        text-align: center;
     }
 
     .contact-form textarea {
@@ -109,17 +109,50 @@
         <p>Send us your inquiries and we will respond as soon as possible.</p>
 
         <label>Your Name</label>
-        <input type="text" placeholder="Enter your name">
+        <input id="name" type="text" placeholder="Enter your name">
 
         <label>Your Email</label>
-        <input type="email" placeholder="Enter your email">
+        <input id="email" type="email" placeholder="Enter your email">
 
         <label>Your Message</label>
-        <textarea placeholder="Write your message here..."></textarea>
+        <textarea id="message" placeholder="Write your message here..."></textarea>
 
-        <button class="send-btn">Send Message</button>
+        <button class="send-btn" onclick="sendMessage()">Send Message</button>
     </div>
 </div>
+
+<script>
+function sendMessage() {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        return;
+    }
+
+    fetch("send.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&message=${encodeURIComponent(message)}`
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert(data.message);
+
+        if (data.status === "success") {
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+        }
+    })
+    .catch(err => {
+        alert("Failed to send message.");
+        console.error(err);
+    });
+}
+</script>
 
 </body>
 </html>

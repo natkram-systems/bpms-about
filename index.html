@@ -21,12 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
         sections.forEach(section => {
             const rect = section.getBoundingClientRect();
 
-            // Fade IN when entering viewport
             if (rect.top < window.innerHeight - 100) {
                 section.classList.add("visible");
             }
 
-            // Fade OUT when leaving viewport
             if (rect.bottom < 150 || rect.top > window.innerHeight) {
                 section.classList.remove("visible");
             }
@@ -38,19 +36,30 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<style>
+    /* ABOUT SECTION STYLING */
+    .about-section {
+        padding: 60px 20px;
+        max-width: 1000px;
+        margin: auto;
+        background: rgba(255,255,255,0.08);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    .about-section h2 {
+        margin-top: 20px;
+    }
+
+    .about-section ul {
+        margin-left: 20px;
+    }
+</style>
+
 </head>
 
 <body>
-
-<!-- STICKY TOP NAV -->
-<nav class="topnav fade">
-    <a href="index.html" class="active">Home</a>
-    <a href="about.html">About</a>
-    <a href="privacy.html">Privacy Policy</a>
-    <a href="terms.html">Terms of Service</a>
-    <a href="contact.html">Contact</a>
-    <button class="darkToggle" onclick="toggleDark()">🌙</button>
-</nav>
 
 <!-- HERO SECTION -->
 <header class="hero fade">
@@ -58,9 +67,54 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="logo.png" class="hero-logo">
         <h1>Business Process Management System</h1>
         <p class="tagline">Modular • Scalable • Multi‑Industry • ERP‑Style Platform</p>
-        <a href="about.html" class="btn-primary">Learn More</a>
+        <a href="#about-section" class="btn-primary">Learn More</a>
     </div>
 </header>
+
+<!-- ABOUT SECTION (converted from about.html) -->
+<section id="about-section" class="about-section reveal">
+    <img src="logo.png" class="hero-logo" style="width:100px;margin:auto;display:block;">
+    <h2>Overview</h2>
+    <p>
+        BPMS is a modular enterprise platform designed to streamline operations across multiple industries. 
+        Each subsystem is activated through a dedicated product key, allowing organizations to enable only the 
+        features they need. The platform supports core business functions such as inventory, accounting, payroll, 
+        and HR, while also offering specialized modules for real estate, church management, POS‑enabled retail, 
+        and time‑tracking automation. A universal Studio module provides full multi‑industry access for 
+        administrators and power users.
+    </p>
+
+    <h2>Subsystems</h2>
+
+    <h3>Core Modules</h3>
+    <ul>
+        <li>Inventory – Stock tracking and item management</li>
+        <li>IM Plus – Inventory with integrated POS</li>
+        <li>Accounting – Financial management and reporting</li>
+        <li>Payroll – Employee compensation and payroll processing</li>
+    </ul>
+
+    <h3>HR & Attendance</h3>
+    <ul>
+        <li>HR System – Employee and HR workflow management</li>
+        <li>DTR Scanning – Automated Daily Time Record processing</li>
+    </ul>
+
+    <h3>Industry‑Specific</h3>
+    <ul>
+        <li>RealEstate – Real estate–focused accounting</li>
+        <li>CMS – Church Management System</li>
+    </ul>
+
+    <h3>Administrative</h3>
+    <ul>
+        <li>Studio – Universal access to all subsystem types</li>
+    </ul>
+
+    <h2>Credits</h2>
+    <p>Developed by: <b>NATKRAM‑SYSTEMS</b></p>
+    <p>Lead Developer: <b>Camlot</b></p>
+</section>
 
 <!-- PURPOSE SECTION -->
 <section class="purpose reveal">
@@ -108,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 </section>
 
-<!-- CONTACT US SECTION (2 COLUMNS) -->
+<!-- CONTACT US SECTION -->
 <section class="contact-home reveal">
     <div class="contact-container">
         <div class="contact-left">
@@ -124,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 </section>
 
-<!-- MULTI-COLUMN FOOTER -->
+<!-- FOOTER -->
 <footer class="footer">
     <div class="footer-columns">
 

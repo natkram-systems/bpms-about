@@ -6,11 +6,60 @@
 <title>Privacy Policy — BPMS</title>
 <link rel="stylesheet" href="assets.css">
 <link rel="icon" type="image/png" href="logo.png">
-<script>
-function toggleDark() {
-    document.body.classList.toggle('dark');
-}
-</script>
+
+<style>
+    body {
+        background: linear-gradient(135deg, #1e1e1e, #2b2b2b);
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .privacy-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .privacy-box {
+        width: 85%;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        animation: fadeIn 0.8s ease;
+    }
+
+    .privacy-box h1 {
+        margin-top: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .privacy-box p, .privacy-box li {
+        line-height: 1.7;
+        opacity: 0.95;
+    }
+
+    .privacy-box h2 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    ul {
+        margin-left: 20px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+
 </head>
 
 <body>
@@ -21,59 +70,90 @@ function toggleDark() {
     <a href="privacy.html" class="active">Privacy Policy</a>
     <a href="terms.html">Terms of Service</a>
     <a href="contact.html">Contact</a>
-    <button class="darkToggle" onclick="toggleDark()">🌙</button>
 </nav>
 
-<div class="page-container fade">
+<div class="privacy-wrapper">
+    <div class="privacy-box fade">
 
-<h1>Application Privacy Policy</h1>
-<p>Last Updated: August 2026</p>
+        <h1>Application Privacy Policy</h1>
+        <p><b>Last Updated: August 2026</b></p>
 
-<h2>1. Introduction</h2>
-<p>
-BPMS (Business Process Management System) is developed by NATKRAM SYSTEMS.
-This Privacy Policy explains how the application collects, uses, and protects information when you use the BPMS software and its connected services.
-</p>
+        <h2>1. Introduction</h2>
+        <p>
+            BPMS (Business Process Management System), developed by NATKRAM SYSTEMS, is committed to protecting your privacy and ensuring the security of your information. 
+            This Privacy Policy explains what data we collect, how we use it, and the measures we take to safeguard your information when you use BPMS and its connected services.
+        </p>
 
-<h2>2. Information We Collect</h2>
-<ul>
-    <li>Basic account information (name, email) when signing in with Google.</li>
-    <li>Operational data entered by users inside BPMS modules.</li>
-    <li>Device information such as OS version and application logs.</li>
-</ul>
+        <h2>2. Information We Collect</h2>
+        <p>We collect the following types of information:</p>
+        <ul>
+            <li><b>Account Information:</b> Name, email address, and basic profile details obtained through Google OAuth.</li>
+            <li><b>Operational Data:</b> Any business or workflow information entered by users within BPMS modules.</li>
+            <li><b>Device & System Logs:</b> OS version, device type, error logs, and performance metrics used for diagnostics.</li>
+            <li><b>Usage Information:</b> Module activity, timestamps, and workflow interactions to improve system reliability.</li>
+        </ul>
 
-<h2>3. Google OAuth Information</h2>
-<p>
-When you sign in using Google, BPMS receives your email address and basic profile information.
-BPMS does not access your contacts, files, or any other Google data.
-</p>
+        <h2>3. Google OAuth Information</h2>
+        <p>
+            When signing in with Google, BPMS receives your verified email address and basic profile information. 
+            BPMS does <b>not</b> access your Google Drive files, contacts, calendar, or any other Google data outside of authentication.
+        </p>
 
-<h2>4. How We Use Information</h2>
-<ul>
-    <li>To authenticate users securely.</li>
-    <li>To enable BPMS features tied to your account.</li>
-    <li>To improve system performance and reliability.</li>
-</ul>
+        <h2>4. How We Use Information</h2>
+        <p>Your information is used for the following purposes:</p>
+        <ul>
+            <li>To authenticate users securely and prevent unauthorized access.</li>
+            <li>To enable BPMS features tied to your account and organizational role.</li>
+            <li>To improve system performance, stability, and workflow efficiency.</li>
+            <li>To diagnose errors, monitor system health, and enhance user experience.</li>
+            <li>To ensure compliance with organizational policies and audit requirements.</li>
+        </ul>
 
-<h2>5. Data Sharing</h2>
-<p>
-BPMS does not sell or share your personal information with third parties.
-Data may be shared only when required by law or to protect system integrity.
-</p>
+        <h2>5. Data Sharing</h2>
+        <p>
+            NATKRAM SYSTEMS does not sell, rent, or trade your personal information. 
+            Data may only be shared under the following conditions:
+        </p>
+        <ul>
+            <li>When required by law, regulation, or legal process.</li>
+            <li>To protect the integrity, security, and functionality of BPMS.</li>
+            <li>With authorized personnel for technical support or maintenance.</li>
+        </ul>
 
-<h2>6. Data Security</h2>
-<p>
-We implement industry‑standard security measures to protect your information, including encryption, secure authentication, and restricted access controls.
-</p>
+        <h2>6. Data Security</h2>
+        <p>
+            We implement industry‑standard security measures including encryption, secure authentication, access controls, and continuous monitoring. 
+            While we strive to protect your data, no system is completely immune to risks. 
+            Users are encouraged to maintain strong passwords and safeguard their accounts.
+        </p>
 
-<h2>7. Your Choices</h2>
-<p>
-You may request deletion of your account data or revoke Google access at any time through your Google Account settings.
-</p>
+        <h2>7. Data Retention</h2>
+        <p>
+            Operational data is retained as long as your organization uses BPMS or as required by business policies. 
+            Logs and diagnostic information may be retained for system improvement and security monitoring.
+        </p>
 
-<h2>8. Contact</h2>
-<p>Email: <b>support@natkram-systems.asia</b></p>
+        <h2>8. Your Rights and Choices</h2>
+        <p>You have the following options regarding your data:</p>
+        <ul>
+            <li>Request deletion of your account or operational data (subject to organizational approval).</li>
+            <li>Revoke Google OAuth access through your Google Account settings.</li>
+            <li>Request clarification on how your data is used or stored.</li>
+        </ul>
 
+        <h2>9. Changes to This Privacy Policy</h2>
+        <p>
+            NATKRAM SYSTEMS may update this Privacy Policy to reflect improvements, legal requirements, or new features. 
+            Continued use of BPMS after updates signifies your acceptance of the revised policy.
+        </p>
+
+        <h2>10. Contact Information</h2>
+        <p>
+            For questions, concerns, or privacy‑related inquiries, contact us at:<br>
+            <b>support@natkram-systems.asia</b>
+        </p>
+
+    </div>
 </div>
 
 </body>

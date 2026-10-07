@@ -1,0 +1,20 @@
+services:
+  web:
+    image: php:8.2-cli
+    working_dir: /var/www/html
+    # PHP's built-in server serves the static HTML/CSS/JS and executes send.php
+    # straight from the bind-mounted working tree, so edits show up immediately.
+    command: ["php", "-S", "0.0.0.0:3000", "-t", "/var/www/html"]
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "3000:3000"
+    env_file:
+      - /run/base44/app.env
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "php", "-r", "exit(@file_get_contents('http://127.0.0.1:3000/index.html') === false ? 1 : 0);"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s

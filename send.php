@@ -26,7 +26,7 @@ try {
     $mail->Host       = 'smtp.titan.email';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'support@natkram-systems.asia';
-    $mail->Password   = 'TY}yT=pAmRaR7.4'; // <-- replace this
+    $mail->Password   = (string) getenv('SMTP_PASSWORD'); // Base44 secret
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // SSL
     $mail->Port       = 465;
 

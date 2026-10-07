@@ -1,0 +1,12 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "SMTP_PASSWORD",
+      "description": "Password for the Titan mailbox support@natkram-systems.asia, used by send.php to send contact-form mail over smtp.titan.email:465 (SSL).",
+      "requiredAtBoot": false
+    }
+  ]
+}
